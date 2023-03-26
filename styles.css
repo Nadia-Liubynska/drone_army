@@ -1,0 +1,314 @@
+@font-face {
+    font-family: "Rubik Bold";
+    src: url("./fonts/Rubik-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Rubik Medium";
+    src: url("./fonts/Rubik-Medium.ttf");
+}
+
+@font-face {
+    font-family: "Rubik Regular";
+    src: url("./fonts/Rubik-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik Regular";
+}
+
+.container {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.button {
+    height: 55px;
+    width: 220px;
+    color:#fff;
+    font-size:18px;
+    background-color: rgb(18, 86, 155);
+    border-radius: 27.5px;
+    border-color: transparent;
+}
+
+.button:hover {
+    cursor:pointer;
+    background-color: rgba(18, 86, 155, 0.8);
+}
+
+.button:active {
+    background-color: rgba(18, 86, 155, 0.7);   
+}
+
+.header {
+    height: 560px;
+    display: flex;
+    background-color: #E3E6ED;
+    padding: 0 94px;
+    margin: 0 auto;
+}
+
+.header__container {
+    display: flex;
+    width: 927px;
+    margin: 0 auto;
+}
+
+.header__content {
+    width: 445px;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.header__icon {
+    display: block;
+    margin-bottom: 100px;
+}
+
+.header__content h1 {
+    width: 374px;
+    font-family: "Rubik Bold";
+    font-size: 80px;
+    color: #212033;
+    line-height: 92%;
+    letter-spacing: 14px;
+    margin-bottom: 40px;
+}
+
+.header__drone {
+    height: 460px;
+}
+
+.main {
+    position: relative;
+    height: 560px;
+    padding: 40px 94px 0px 94px;
+    margin: 0 auto;
+    color: #212033;
+}
+
+.main h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.main p {
+    display: block;
+    width: 710px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main__gallery {
+    margin-top: 40px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.main__gallery img {
+    height: 203px;
+    width: 345px;
+    border-radius: 12px;
+}
+
+.main__gallery img:hover {
+    transform: scale(1.2);
+}
+
+.main__gallery img:not(:last-of-type) {
+    margin-right: 20px;
+}
+
+.main__gallery::before {
+    position: absolute;
+    content: "";
+    background-color: #E3E6ED;
+    height: 100px;
+    width: 90%;
+    left: 0;
+    bottom: 135px;
+    z-index: -1;
+}
+
+.donation {
+    height: 335px;
+    padding: 0 94px;
+    margin: 0 auto;
+    color:#212033;
+    margin-bottom: 67px;
+}
+
+.donation h2 {
+    font-family: "Rubik Bold";
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+
+.donation__form form {
+    display: flex;
+    width: 792px;
+    margin: 0 auto;
+}
+
+.donation__foundations {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    /*margin-right: 24px;*/
+    height: 246px;
+}
+
+.donation__foundations label {
+    position: relative;
+    height: 46px;
+    width: 280px;
+    line-height: 46px;
+    color: #12569B;
+}
+
+.donation__foundations *:first-child {
+    margin-bottom: 12px;
+}
+
+.donation__foundations label:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+input {
+    font-size: 16px;
+    padding-left: 24px;
+}
+
+input[type=radio] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+input[type=radio] ~span {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border:solid #12569B 1px;
+    border-radius: 23px;
+    padding: 0 24px;
+    cursor: pointer;
+}
+
+input[type=radio]:checked ~span {
+    background-color: rgba(227, 230, 237, 0.5)
+}
+
+input[type=radio] ~span::after {
+    content: "";
+}
+
+input[type=radio]:checked ~span::after {
+    content: " ✓";
+    right: 30px;
+    position: absolute;
+}
+
+.card__credentials {
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.card__credentials > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__credentials > div label {
+    display: inline-block;
+    width: 112px
+}
+
+.card__credentials > div label > input {
+    margin-top: 12px;
+}
+
+.donation__info {
+    display: flex;
+    width: 244px;
+}
+
+.donation__info * {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.donation__info label {
+    text-align: left;
+}
+
+.card__credentials label > input {
+    height: 43px;
+    width: 100%;
+    background-color: transparent;
+    border: solid #12569B 1px;
+    border-radius: 8px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    color:#212033;
+}
+
+.cvv_expirationate {
+    display: flex;
+    flex-direction: row;
+}
+
+.cvv_expirationate label:not(:last-of-type) {
+    margin-right: 20px;
+}
+
+.sum__submit {
+    height: 246px;
+    margin-top: 46px;
+}
+
+.sum__submit input {
+    width: 220px;
+    height: 61px;
+    background-color: transparent;
+    border: solid #12569B 1px;
+    border-radius: 8px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-size: 24px;
+    color:#212033;
+}
+
+.sum__submit label {
+    font-size: 24px;
+}
+
+.button__submit {
+    font-size: 16px;
+    padding-top: 16px;
+    margin-top: 31px;
+}
+
+.footer {
+    height: 164px;
+    background-color:rgb(18, 86, 155);
+    color: #fff;
+    padding-top: 40px;
+    margin-top: 67px;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+.footer p:not(:last-of-type) {
+    margin-bottom: 20px;
+}
